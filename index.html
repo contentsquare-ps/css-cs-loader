@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Cs Loader</title>
+    <style type="text/css">
+ .container {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    filter: url('#goo');
+    animation: rotate-move 1.5s ease-in-out infinite;
+  }
+  
+  .dot {
+    border-radius: 50%;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  
+  .dot-3 {
+    background-color: rgba(0,0,0,0);
+    animation: dot-3-move 1.5s ease infinite;
+  }
+  .dot-3 svg{
+      position: absolute;
+    left: 1px;
+    top: -14px;
+  }
+  
+  .dot-2 {
+    background-color: rgba(0,0,0,0);
+    animation: dot-2-move 1.5s ease infinite;
+  }
+  .dot-2 svg{
+      transform: rotateZ(240deg);
+      padding: 0px 0;
+      position: absolute;
+      left: -15px;
+  }
+  
+  .dot-1 {
+    background-color: rgba(0,0,0,0);
+    animation: dot-1-move 1.5s ease infinite;
+  }
+  .dot-1 svg{
+      transform: rotateZ(120deg);
+      position: absolute;
+      padding: 6px;
+  }
+  
+  
+  @keyframes dot-3-move {
+      0% {transform: translateY(0px) scale(1)}
+      20% {transform: translateY(-90px) scale(.45)}
+      40% {transform: translateY(-90px) scale(.45)}
+      80% {transform: scale(1)}
+      100% {transform: scale(1)}
+  }
+  
+  @keyframes dot-2-move {
+      0% {transform: translateY(0px) scale(1)}
+      20% {transform: translate(-80px, 60px) scale(.45)}
+      40% {transform: translate(-80px, 60px) scale(.45)}
+      80% {transform: scale(1)}
+      100% {transform: scale(1)}
+  }
+  
+  @keyframes dot-1-move {
+      0% {transform: translateY(0px) scale(1)}
+      20% {transform: translate(80px, 60px) scale(.45)}
+      40% {transform: translate(80px, 60px) scale(.45)}
+      80% {transform: scale(1)}
+      100% {transform: scale(1)}
+  }
+  
+  @keyframes rotate-move {
+    5% {transform: translate(-50%, -50%) rotate(0deg)}
+    75% {transform: translate(-50%, -50%) rotate(360deg)}
+    100% {transform: translate(-50%, -50%) rotate(360deg)}
+  }
+    </style>
+  </head>
+  <body>
+    
+<div class="container">
+
+  <div class="container">
+    <div class="dot dot-1">
+      <svg id="morph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 230">
+        <path fill="#ED5B55" id="octo-1" class="bg-lime" d="M168.6,87.8c-2.5-0.2-4.8-0.8-6.9-2c-15.8-9.2-31.7-18.3-47.6-27.5c-4.9-2.8-9.5-2.8-14.4,0    c-15.6,9.1-31.3,18-46.9,27.2c-5.2,3-10.1,3.1-15.3,0C26.2,78.8,14.7,72.3,3.3,65.8c-4.4-2.5-4.4-5.3,0-7.9    C35.6,39.2,68,20.5,100.4,1.8c4.1-2.4,8.5-2.4,12.6,0c32.4,18.6,64.8,37.3,97.1,56c4.6,2.6,4.5,5.3-0.1,8    c-11.7,6.8-23.4,13.5-35,20.2C173.1,87.2,170.9,87.6,168.6,87.8z"/>
+        <path fill="#ED5B55" id="circle-1" style="visibility:hidden" d="M75.7,61.3c0,0-2.5,4.1-5.8,7.3c0,0-3.7,3.4-4.9,4.3c-7.7,5.8-14.9,7.2-14.9,7.2s-8.6,2.4-17.4,0.2    c0,0-12.7-3.7-19.1-10.1c-9.9-6.1-13-23.8-11-15.8C-2.8,38.6,2,28.3,2,28.3s6.7-14.8,11.7-17.9c0,0,9-7.9,20.8-9.9    c0,0,9.5-1,12.2,0c0,0,11.8,0.7,22.8,11.3c0,0,10,11.3,10.8,20.7c0,0,3.7,12.2-2.8,25.3L75.7,61.3z"/>
+      </svg>
+    </div>
+    <div class="dot dot-2">
+      <svg id="morph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 230">
+        <path fill="#F7C654" id="octo-2" class="bg-lime" d="M168.6,87.8c-2.5-0.2-4.8-0.8-6.9-2c-15.8-9.2-31.7-18.3-47.6-27.5c-4.9-2.8-9.5-2.8-14.4,0    c-15.6,9.1-31.3,18-46.9,27.2c-5.2,3-10.1,3.1-15.3,0C26.2,78.8,14.7,72.3,3.3,65.8c-4.4-2.5-4.4-5.3,0-7.9    C35.6,39.2,68,20.5,100.4,1.8c4.1-2.4,8.5-2.4,12.6,0c32.4,18.6,64.8,37.3,97.1,56c4.6,2.6,4.5,5.3-0.1,8    c-11.7,6.8-23.4,13.5-35,20.2C173.1,87.2,170.9,87.6,168.6,87.8z"/>
+        <path fill="#F7C654" id="circle-2" style="visibility:hidden" d="M75.7,61.3c0,0-2.5,4.1-5.8,7.3c0,0-3.7,3.4-4.9,4.3c-7.7,5.8-14.9,7.2-14.9,7.2s-8.6,2.4-17.4,0.2    c0,0-12.7-3.7-19.1-10.1c-9.9-6.1-13-23.8-11-15.8C-2.8,38.6,2,28.3,2,28.3s6.7-14.8,11.7-17.9c0,0,9-7.9,20.8-9.9    c0,0,9.5-1,12.2,0c0,0,11.8,0.7,22.8,11.3c0,0,10,11.3,10.8,20.7c0,0,3.7,12.2-2.8,25.3L75.7,61.3z"/>
+      </svg>
+    </div>
+    <div class="dot dot-3">
+      <svg id="morph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 230">
+        <path fill="#27B6FE" id="octo-3" class="bg-lime" d="M168.6,87.8c-2.5-0.2-4.8-0.8-6.9-2c-15.8-9.2-31.7-18.3-47.6-27.5c-4.9-2.8-9.5-2.8-14.4,0    c-15.6,9.1-31.3,18-46.9,27.2c-5.2,3-10.1,3.1-15.3,0C26.2,78.8,14.7,72.3,3.3,65.8c-4.4-2.5-4.4-5.3,0-7.9    C35.6,39.2,68,20.5,100.4,1.8c4.1-2.4,8.5-2.4,12.6,0c32.4,18.6,64.8,37.3,97.1,56c4.6,2.6,4.5,5.3-0.1,8    c-11.7,6.8-23.4,13.5-35,20.2C173.1,87.2,170.9,87.6,168.6,87.8z"/>
+        <path fill="#27B6FE" id="circle-3" style="visibility:hidden" d="M75.7,61.3c0,0-2.5,4.1-5.8,7.3c0,0-3.7,3.4-4.9,4.3c-7.7,5.8-14.9,7.2-14.9,7.2s-8.6,2.4-17.4,0.2    c0,0-12.7-3.7-19.1-10.1c-9.9-6.1-13-23.8-11-15.8C-2.8,38.6,2,28.3,2,28.3s6.7-14.8,11.7-17.9c0,0,9-7.9,20.8-9.9    c0,0,9.5-1,12.2,0c0,0,11.8,0.7,22.8,11.3c0,0,10,11.3,10.8,20.7c0,0,3.7,12.2-2.8,25.3L75.7,61.3z"/>
+      </svg>
+    </div>
+  </div>
+  
+  </body>
+</html>
